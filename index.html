@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录我的网站</title>
+    <style type="text/css">
+        .a1{font-size:30px; background-color: palegoldenrod;color: hotpink; text-align: center;}
+        .a2{text-align: center; font-size: 20px; margin-top: 50px;}
+        #username{height: 20px; width: 200px;}
+        #password{height: 20px; width: 200px;}
+        #a5{height: 30px; width: 50px; margin-top: 10px;margin-left: 40px;}
+   </style>
+</head>
+<body>
+    
+    <a href="https://www.runoob.com/">访问菜鸟教程</a>
+    <a href="hc.html">访问我的网站</a>
+    <a href="https://www.runoob.com/html/html-css.html">继续学习</a><br>
+    <button type="button"><a href="https://www.runoob.com/js/js-functions.html">点击按钮可继续学习js</a></button>
+    <h1 class="a1">登陆</h1>
+    <p class="a2">
+    <from>
+        账号：<input id="username" type="text"/><br>
+        密码：<input id="password" type="password" /><br>
+        <button id="a5" type="button" onclick="login()">确认</button>
+    </p>
+        
+
+    </from>
+    <script type="text/javascript">
+        let accountAll=[{//存储账户数据的数组
+            username:201740186,
+            password:"hc201740186"
+
+        }]
+
+        function login(){//登陆判断
+            let username= document.getElementById("username").value;
+            let password= document.getElementById("password").value;
+    
+
+                if(accountAll[0].username == username && accountAll[0].password == password){
+                    alert("登陆成功");
+                    window.location.href="hc.html";//跳转页面
+                }else{
+                    alert("账号或密码错误，请重新输入！");
+                }
+            }
+        
+    
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>
